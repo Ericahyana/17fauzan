@@ -20,7 +20,7 @@
                      <div class="form-group">
                             <label for="id_barang">Nama Barang</label>
                             <select class="form-control" id="id_barang" name="id_barang">
-                                   <option>-</option>
+                                   <option value="" selected="" disabled="">-</option>
                                    <?php foreach ($data_barang as $data_barang): ?>
                                    <option value="<?=$data_barang ['id_barang']; ?>"><?=$data_barang ['nama_barang']; ?></option>
                                    <?php endforeach;?>
@@ -30,7 +30,7 @@
                      <div class="form-group">
                             <label for="id_supplier">Nama Supplier</label>
                             <select class="form-control" id="id_supplier" name="id_supplier">
-                                   <option>-</option>
+                                   <option value="" selected="" disabled="">-</option>
                                    <?php foreach ($data_supplier as $data_supplier): ?>
                                    <option value="<?=$data_supplier ['id_supplier']; ?>"><?=$data_supplier ['nama_supplier']; ?></option>
                                    <?php endforeach;?>
