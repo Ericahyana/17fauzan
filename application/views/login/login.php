@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-danger">
 
   <div class="container">
 
@@ -59,7 +59,7 @@
                       <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                       <small class="form-text text-danger"><?= form_error('password')?></small>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-danger btn-user btn-block">
                       Login
                     </button>
                   </form>

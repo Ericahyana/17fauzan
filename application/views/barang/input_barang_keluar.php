@@ -18,7 +18,7 @@
 <?php if($this->session->flashdata('data_error')) : ?>
   <div class="row mt-3">
     <div class="col-md-6">
-    <div class="alert alert-dangger alert-dismissible fade show" role="alert">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
         Barang Keluar <strong>Gagal</strong> <?= $this->session->flashdata('data_error'); ?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -31,8 +31,8 @@
               <form action="" method="post">
                      <div class="form-group">
                             <label for="id_barang">Nama Barang</label>
-                            <select class="form-control" id="id_barang" name="id_barang">
-                                   <option>-</option>
+                            <select class="form-control" id="id_barang" name="id_barang" >
+                                   <option value="" selected="" disabled="">-</option>
                                    <?php foreach ($data_barang as $data_barang): ?>
                                    <option value="<?=$data_barang ['id_barang']; ?>"><?=$data_barang ['nama_barang']; ?></option>
                                    <?php endforeach;?>
@@ -42,7 +42,7 @@
                      <div class="form-group">
                             <label for="id_customer">Nama Customer</label>
                             <select class="form-control" id="id_customer" name="id_customer">
-                                   <option>-</option>
+                                   <option value="" selected="" disabled="">-</option>
                                    <?php foreach ($data_customer as $data_customer): ?>
                                    <option value="<?=$data_customer ['id_customer']; ?>"><?=$data_customer ['nama_customer']; ?></option>
                                    <?php endforeach;?>

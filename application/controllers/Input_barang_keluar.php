@@ -28,7 +28,7 @@ public function index(){    if($this->session->userdata('auth')){
                     $this->session->set_flashdata('data', 'tersimpan');
                     redirect('input_barang_keluar');
                 }else{
-                    $this->session->set_flashdata('data_error', 'Stok Kurang ! :(');
+                    $this->session->set_flashdata('data_error', 'Stok Kurang ! :( Tersedia : '.$data['stok']);
                     redirect('input_barang_keluar');
                 }
             }
