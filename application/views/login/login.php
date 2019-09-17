@@ -28,23 +28,12 @@
     <div class="row justify-content-center">
 
       <div class="col-xl-6 col-lg-12 col-md-9">
-<?php if($this->session->flashdata('username')) : ?>
-  <div class="row mt-12">
-    <div class="col-md-12">
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <?= $this->session->flashdata('username'); ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
                 <div class="p-5">
                   <div class="text-center">
+              <?= $this->session->flashdata('username'); ?>
                     <h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
                   </div>
                   <form class="user" method="post" action="<?= base_url('login/login'); ?>">
@@ -52,12 +41,10 @@
                       <input type="username" class="form-control form-control-user" id="username" name="username" placeholder="Username" >
 <!--                       value="<?= set_value('username');?>" -->
                       <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
-                      <small class="form-text text-danger"><?= form_error('username')?></small>
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                       <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
-                      <small class="form-text text-danger"><?= form_error('password')?></small>
                     </div>
                     <button type="submit" class="btn btn-danger btn-user btn-block">
                       Login

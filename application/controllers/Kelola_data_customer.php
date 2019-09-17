@@ -8,6 +8,9 @@ class Kelola_data_customer extends CI_Controller {
     public function index(){
         $data['title'] = "Kelola Data Customer";
         $data['data_customer'] = $this->kelola_data_customer_model->getAllcustomer();
+        if($this->input->post('cari')){
+            $data['data_customer'] = $this->kelola_data_customer_model->cariCustomer();
+        }
         $this->load->view('partials/header', $data);
         $this->load->view('customer/kelola_data_customer');
         $this->load->view('partials/footer');

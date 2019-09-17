@@ -19,6 +19,14 @@
     <div class="col-md-9">
       <a href="<?= base_url();?>Kelola_data_customer/tambah_data_customer" class="btn btn-primary float-right">Tambah Data Customer</a>
     </div>
+    <form action="" method="post">
+            <div class="input-group mb-3 float-right">
+              <input type="text" class="form-control" placeholder="Cari Customer" name="cari">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" >Cari</button>
+              </div>
+            </div>
+    </form>
 </div>
 <div class="row mt-3">
     <div class="col-md-12">

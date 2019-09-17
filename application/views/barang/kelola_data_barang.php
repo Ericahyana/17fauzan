@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>kelola data barang</h1>
+  <h1>Stok data barang</h1>
 </div>
 
 <div class="container">
@@ -30,7 +30,7 @@
   </div>
   <div class="row mt-3">
     <div class="col-md-12">
-    <table class="table">
+    <table class="table" id="dataTable">
     <thead>
       <tr>
        <th scope="col">No.</th>
@@ -39,7 +39,7 @@
        <th scope="col">Deskripsi</th>
         <th scope="col">Stok</th>
         <th scope="col">Harga</th>
-        <th scope="col">opsi</th>
+        <th scope="col" style="width: 15%">opsi</th>
       </tr>
     </thead>
     <tbody>
@@ -61,5 +61,4 @@
   </table>
     </div>
   </div>
-  
 </div>

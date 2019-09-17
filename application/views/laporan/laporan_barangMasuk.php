@@ -3,24 +3,22 @@
 </div>
 
 <div class="container">
-<div class="row mt-3">
-    <div class="col-md-3">
-      <form action="" method="post">
-        <ul class="pager">
-            <li class="input-group">
-        <div class="input-group mb-3 float-right">
-          <input type="text" class="form-control" placeholder="Cari Barang" name="cari">
-          <div class="input-group-append">
-            <button class="btn btn-info" type="submit" >Cari</button>
-          </div>
-        </div>
-      </li>
-            <li class="input-group">
-              <input type="submit" class="btn btn-info" value="Print Report" onclick="PrintElem('#print')"></li>
-          </ul> 
+
+<div class="row">
+  <div class="col-6 mt-3">
+    <form action="" method="post">
+              <div class="input-group mb-3 col-6">
+                <input type="text" class="form-control" placeholder="Cari Barang" name="cari">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit" >Cari</button>
+                </div>
+              </div>
       </form>
-    </div>
   </div>
+  <div class="col-6 mt-3 text-right">
+              <input type="submit" class="btn btn-info" value="Print Report" onclick="PrintElem('#print')">
+  </div>
+</div>
   <div class="row mt-3">
     <div id="print">
 

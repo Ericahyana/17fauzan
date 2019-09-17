@@ -28,6 +28,11 @@ class kelola_data_customer_model extends CI_model {
     public function hapusCustomer($id_customer){
         $this->db->delete('data_customer', ['id_customer' => $id_customer]);
     }
+    public function cariCustomer(){
+        $cari = $this->input->post('cari', true);
+        $this->db->like('nama_customer', $cari);
+        return $this->db->get('data_customer')->result_array();
+    }
 
 
 

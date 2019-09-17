@@ -37,7 +37,7 @@
       <th scope="col">Nama supplier</th>
       <th scope="col">Alamat</th>
       <th scope="col">No. Hp</th>
-      <th scope="col">opsi</th>
+      <th scope="col" style="width: 15%">opsi</th>
     </tr>
   </thead>
   <tbody>

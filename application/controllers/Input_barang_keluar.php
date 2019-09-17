@@ -19,16 +19,16 @@ public function index(){    if($this->session->userdata('auth')){
             $this->load->view('barang/input_barang_keluar', $data);
             $this->load->view('partials/footer');
         } else {
-                $a = $this->input->post('id_barang', true);
+                $id = $this->input->post('id_barang', true);
                 $jumlah = $this->input->post('jumlah', true);
-                $data = $this->kelola_data_barang_model->getStok($a);
+                $data = $this->kelola_data_barang_model->getStok($id);
                    // print_r($data); 
                 if($jumlah<=$data['stok']){
                     $this->kelola_data_barang_model->inputBarangKeluar();
                     $this->session->set_flashdata('data', 'tersimpan');
                     redirect('input_barang_keluar');
                 }else{
-                    $this->session->set_flashdata('data_error', 'Stok Kurang ! :( Tersedia : '.$data['stok']);
+                    $this->session->set_flashdata('data_error', 'Stok Kurang ! :( Stok : '.$data['stok']);
                     redirect('input_barang_keluar');
                 }
             }
